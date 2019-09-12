@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'main#welcome'
+  get 'email_links/new'
+  post 'email_links/create', as: :magic_link
+  get 'email_links/validate', as: :email_link
+  devise_for :users
 end

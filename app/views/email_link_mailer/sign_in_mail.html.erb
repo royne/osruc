@@ -1,0 +1,7 @@
+<h3>Hola <%= @user.email %></h3>
+<p>
+  Ingresa al siguiente enlace para ver tu curso online Thuoper Betesa
+</p>
+<p>
+  <%= link_to 'Ingresa al curso', email_link_url(token: @token) %>
+</p>
